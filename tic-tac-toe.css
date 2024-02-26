@@ -1,0 +1,106 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+ }
+ .background-image{
+  position: fixed;
+  z-index: -1;
+  filter: saturate(1.5) contrast(1.5) brightness(1.1) blur(40px);
+ }
+ button{
+  cursor: pointer;
+}
+.confetti{
+  z-index: 1;
+  position: fixed;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  pointer-events: none;
+}
+.game-window{
+  background-color:  rgb(116, 112, 219);
+  width: 650px;
+  height: 600px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  gap: 25px;
+}
+.stats-and-options{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+/*Board: */
+[id="0"], [id="1"], [id="2"], [id="3"], [id="4"], [id="5"], [id="6"], [id="7"], [id="8"] {
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border: none;
+  vertical-align: top;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 80px;
+}
+ .row-lines{
+  border: solid;
+  border-left: 2px;
+  border-right: 2px;
+}
+.column-lines{
+  border: solid;
+  border-top: 2px;
+  border-bottom: 2px;
+}
+.middle-button{
+  border: solid;
+} 
+
+
+/*Options: */
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.option-button{
+  margin: 0 15px 0 15px;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 15px 25px 15px 25px;
+  background-color: black;
+  color: white;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 20px;
+  transition: color 0.25s, background-color 0.25s;
+}
+.option-button:hover{
+  background-color: white;
+  color: black;
+  text-shadow: 0px 0px 3px black;
+}
+
+/*Info: */
+.round-result{
+  color: white;
+  text-shadow: 0 0 4px rgb(0, 0, 0);
+  font-size: 24px;
+  font-family: courier;
+  font-weight: bold;
+}
+.results{
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}

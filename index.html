@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic-tac-toe.css">
+  </head>
+  <body>
+    <img src="./media/background-picture2.jpg" alt="background" class="background-image">
+    <img src="./media/confetti.gif" alt="confetti" class="confetti">
+    <div class="game-window">
+      <div class="round-result">...</div>
+      <div class="board-div">
+          <div>
+          <button class="box" id="0"></button><button class="column-lines box" id="1"></button><button class="box" id="2"></button>
+        </div>
+        <div>
+          <button class="row-lines box" id="3"></button><button class="middle-button box" id="4"></button><button class="row-lines box" id="5"></button>
+        </div>
+        <div>
+          <button class="box" id="6"></button><button class="column-lines box" id="7"></button><button class="box" id="8"></button>
+        </div>
+      </div>
+      <div class="stats-and-options">
+        <div class="results">past results</div>
+        <div class="options">
+          <button class="option-button" onclick="player2 = true;
+          gameOver = false;
+          turnCount = 1;
+          resetGameBoard();
+          ">Player VS Player</button>
+          <button class="option-button" onclick="player2 = false;
+          gameOver = false;
+          turnCount = 1;
+          resetGameBoard();
+          ">Player VS Computer</button>
+          <button class="option-button" onclick="
+          localStorage.removeItem('score');
+          pastResults.wins1 = 0;
+          pastResults.ties = 0;
+          pastResults.wins2 = 0;
+          showResults();
+          ">Reset Score</button>
+        </div>
+      </div>
+    </div>
+    <script src="tic-tac-toe.js" ></script>
+  </body>
+</html>
